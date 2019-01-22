@@ -1,0 +1,50 @@
+.content {
+    max-width: 600px;
+    margin: 10%;
+    background: white;
+}
+
+.axis--x path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2.5px;
+}
+
+.circle {
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+}
+
+.text {
+  opacity: 0.9;
+}
+
+h2 {
+  margin: 5%;
+}
+
+h4 {
+    padding: 5px 40px;
+}
+
+img {
+    display: block;
+    margin-right: 250px;
+    margin-left: 100px;
+    max-width: 100%;
+}
+
+p {
+    padding: 5px 60px;
+    width: 100%;
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}

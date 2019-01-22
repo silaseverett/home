@@ -1,0 +1,48 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Silas Everett Project 1</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="content">
+    <h2>Motion: 10 second snapshot of accelerometer data from my iPhone 6</h2><br>
+    <h3 align="center"><b>Can you guess what physical movement this shows?</b></h3>
+    <svg width="700" height="400"></svg>
+    <p align="center">*Data extracted using Pythonista's motion module on iPhone 6</p>
+    <p align="right">[answer, you guessed it: jumping]</p>
+    <div>
+    <p><b>Try changing movements:</b>
+    <button id="filter_jumping">Jumping</button>
+    <button id="filter_jogging">Jogging</button>
+    <button id="filter_dancing">Dancing</button>
+    </p>
+    </div>
+    <br>
+    <h4><b>Explanation</b></h4>
+    <p>I was curious if I could use my phone's sensor data to predict a concerted physical action
+      like jumping or walking or sitting down.  Here, the multi-series line chart using D3.js, given the time dimension,
+      provides a view of the physical action.</p>
+
+       <br>
+
+
+    <br><br>
+    <p> Data comes from the phone's accelerometer in the X,Y, and Z planes:</p>
+    <img src="img/xyz.png" alt="Accelerometer Encodings">
+    <p align="center">*Photo credit: MathWorks</p>
+
+    <p>With streaming data, the multi-series line chart lends itself to encoding more interesting events, and in real time.
+      Think about actions like tap dancing, parcour acrobatics, X-game events, stunt plane maneuvures,
+      etc. What would they look like in a multi-series line chart?</p>
+    <!-- page content -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/d3.v4.js"></script>
+    <script src="js/my-viz.js"></script>
+    </div>
+  </body>
+</html>
