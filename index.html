@@ -1,81 +1,38 @@
-# My Repo of Projects and Other Stuff 
-[aboutme](https://github.com/silaseverett/home/blob/master/aboutme/cv.html)
+﻿<!DOCTYPE html>
+<html>
 
-Exploratory data science related code, programs and projects and other curiosity provoking stuff.
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>homepage</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
 
-Let me know if you have any insights, ideas or further thoughts about what's presented here at silas@berkeley.edu.
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="my-project-repo-and-other-stuff">My Projects and Other Stuff</h1>
+<p>Exploratory data science related code, programs and projects and other curiosity provoking stuff.</p>
+<p>Let me know if you have any insights, ideas or further thoughts about what’s presented here at <a href="mailto:silas@berkeley.edu">silas@berkeley.edu</a>.</p>
+<h3 id="content">Content</h3>
+<ul>
+<li>
+<p>Exploratory data analysis<br>
+<a href="http://silaseverett.github.io/corruption-and-parking-violations-files-eda">Diplomatic Corruption and Parking Fines in NYC</a><br>
+<a href="http://silaseverett.github.io/greenhouse-gases-eda">Greenhouse Gases: Case of Eastern Zambia</a></p>
+</li>
+<li>
+<p>Streaming data storage and extraction<br>
+<a href="http://silaseverett.github.io/aws-elk-data-stream">Streaming Social Media Analytics Platform</a></p>
+</li>
+<li>
+<p>Visualizations and reporting<br>
+<a href="http://silaseverett.github.io/twitter_vizualization">Twitter Monitor</a><br>
+<a href="http://silaseverett.github.io/accelerometer-visualization">What’s My Accelerometer?</a></p>
+</li>
+</ul>
+<p>All github repos <a href="https://github.com/silaseverett">here</a></p>
+<h3 id="under-the-hood">Under the Hood</h3>
+<p>This site is made with an open source static site generator. Awesomely, GitHub provides free web hosting for repositories, called <a href="http://pages.github.com/">GitHub Pages</a>, and that’s how this site is hosted.</p>
+</div>
+</body>
 
-### Content
-
-- Exploratory data analysis
-[Diplomatic Corruption and Parking Fines in NYC](http://silaseverett.github.io/corruption-and-parking-violations-files-eda)
-[Greenhouse Gases: Case of Eastern Zambia](http://silaseverett.github.io/greenhouse-gases-eda)
-
-- Streaming data storage and extraction
-[Streaming Social Media Analytics Platform](http://silaseverett.github.io/aws-elk-data-stream)
-
-- Visualizations and reporting
-[Twitter Monitor](http://silaseverett.github.io/twitter_vizualization)
-[](http://silaseverett.github.io/accelerometer-visualization)
-
-All github repos [here](https://github.com/silaseverett)
-
-### Under the Hood
-
-This site is made with an open source static site generator. Awesomely, GitHub provides free web hosting for repositories, called [GitHub Pages](http://pages.github.com/), and that's how this site is hosted. 
-
----
-
-## To Set up Locally
-
-You can take all the files of this site and run them just on your computer as if it were live online, only it's just on your machine.
-
-#### Pages
-
-* [Jekyll](http://jekyllrb.com/)
-* [Ruby](https://www.ruby-lang.org/en/)
-* [Git](http://git-scm.com/)
-
-_If you have installed [GitHub Desktop](https://desktop.github.com), Git was also installed automatically._
-
-To copy the repository's files from here onto your computer and to view and serve those files locally, at your computer's command line type:
-
-```bash
-git clone https://github.com/github/government.github.com.git
-cd government.github.com
-script/bootstrap
-script/server
-```
-Open `http://localhost:4000` in your browser
-
-## Deploying
-
-github.government.com now utilizes a two-repo approach to managing staging and production deployments:
-
-- **Production:** [github/government.github.com](https://github.com/github/government.github.com/) (this repository)
-- **Staging:** [government/staging](https://ghe.io/government/staging)
-
-For small changes, you can deploy right to production by merging a pull request. For larger changes, push your branch to the staging repo from Terminal. Here's how to setup staging and deploy to it:
-
-```
-$ script/stage staging
-```
-
-
-This script will generate the government site (without starting the local server) and prep it for staging. It does this by creating a temporary Git repo within the compiled `_site` directory and force pushing that to a separate remote repo (in this case, https://ghe.io/government/staging).
-
-Pushing to the staging repo requires authenticating with GitHub via Terminal. You'll be asked for a username and password when running `script/stage`. Use your GHE.io username and, since we enforce 2FA, use a [personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) as your password.
-
-_Having trouble deploying to a staging server? Delete the entire `_site` directory and try again. Sometimes the temporary Git repository we make in the script can go awry._
-
-When you're done with staging and your pull request has been approved, you can merge your branch. Your changes will be automatically deployed to the production site in a few minutes.
-
-----
-
-#### Triage Issues [![Open Source Helpers](https://www.codetriage.com/github/government.github.com/badges/users.svg)](https://www.codetriage.com/github/government.github.com)
-
-In addition to contributing changes, you can help to triage issues. This can include asking for vital information or requesting formatting changes. If you would like to start triaging issues, one easy way to get started is to [subscribe to government.github.com on CodeTriage](https://www.codetriage.com/github/government.github.com).
-
-----
-
-Don't see what you're looking for? Create an [issue](https://github.com/github/government.github.com/issues/new), we'll do our best to help you out.
+</html>
