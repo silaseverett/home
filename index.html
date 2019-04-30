@@ -1,48 +1,82 @@
+# My Repo of Projects and Other Stuff 
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Silas Everett Project 1</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div class="content">
-    <h2>Motion: 10 second snapshot of accelerometer data from my iPhone 6</h2><br>
-    <h3 align="center"><b>Can you guess what physical movement this shows?</b></h3>
-    <svg width="700" height="400"></svg>
-    <p align="center">*Data extracted using Pythonista's motion module on iPhone 6</p>
-    <p align="right">[answer, you guessed it: jumping]</p>
-    <div>
-    <p><b>Try changing movements:</b>
-    <button id="filter_jumping">Jumping</button>
-    <button id="filter_jogging">Jogging</button>
-    <button id="filter_dancing">Dancing</button>
-    </p>
-    </div>
-    <br>
-    <h4><b>Explanation</b></h4>
-    <p>I was curious if I could use my phone's sensor data to predict a concerted physical action
-      like jumping or walking or sitting down.  Here, the multi-series line chart using D3.js, given the time dimension,
-      provides a view of the physical action.</p>
+![screenshot](assets/img/screenshot.png)
 
-       <br>
+Curious, exploratory, and quirky data science related code, programs and projects.
+
+Let me know if you have any insights, ideas or further thoughts about what's presented here at silas@berkeley.edu.
+
+### Content
+
+- Exploratory data analysis
+[Diplomatic Corruption and Parking Fines in NYC](http://silaseverett.github.io/corruption-and-parking-violations-files-eda)
+[Greenhouse Gases: Case of Eastern Zambia](http://silaseverett.github.io/greenhouse-gases-eda)
+
+- Streaming data storage and extraction
+[Streaming Social Media Analytics Platform](http://silaseverett.github.io/aws-elk-data-stream)
+
+- Visualizations and reporting
+[Twitter Monitor](http://silaseverett.github.io/twitter_vizualization)
+[](http://silaseverett.github.io/accelerometer-visualization)
+
+All github repos [here](https://github.com/silaseverett)
+
+### Under the Hood
+
+This site is made with an open source static site generator. Awesomely, GitHub provides free web hosting for repositories, called [GitHub Pages](http://pages.github.com/), and that's how this site is hosted. 
+
+---
+
+## To Set up Locally
+
+You can take all the files of this site and run them just on your computer as if it were live online, only it's just on your machine.
+
+#### Pages
+
+* [Jekyll](http://jekyllrb.com/)
+* [Ruby](https://www.ruby-lang.org/en/)
+* [Git](http://git-scm.com/)
+
+_If you have installed [GitHub Desktop](https://desktop.github.com), Git was also installed automatically._
+
+To copy the repository's files from here onto your computer and to view and serve those files locally, at your computer's command line type:
+
+```bash
+git clone https://github.com/github/government.github.com.git
+cd government.github.com
+script/bootstrap
+script/server
+```
+Open `http://localhost:4000` in your browser
+
+## Deploying
+
+github.government.com now utilizes a two-repo approach to managing staging and production deployments:
+
+- **Production:** [github/government.github.com](https://github.com/github/government.github.com/) (this repository)
+- **Staging:** [government/staging](https://ghe.io/government/staging)
+
+For small changes, you can deploy right to production by merging a pull request. For larger changes, push your branch to the staging repo from Terminal. Here's how to setup staging and deploy to it:
+
+```
+$ script/stage staging
+```
 
 
-    <br><br>
-    <p> Data comes from the phone's accelerometer in the X,Y, and Z planes:</p>
-    <img src="img/xyz.png" alt="Accelerometer Encodings">
-    <p align="center">*Photo credit: MathWorks</p>
+This script will generate the government site (without starting the local server) and prep it for staging. It does this by creating a temporary Git repo within the compiled `_site` directory and force pushing that to a separate remote repo (in this case, https://ghe.io/government/staging).
 
-    <p>With streaming data, the multi-series line chart lends itself to encoding more interesting events, and in real time.
-      Think about actions like tap dancing, parcour acrobatics, X-game events, stunt plane maneuvures,
-      etc. What would they look like in a multi-series line chart?</p>
-    <!-- page content -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/d3.v4.js"></script>
-    <script src="js/my-viz.js"></script>
-    </div>
-  </body>
-</html>
+Pushing to the staging repo requires authenticating with GitHub via Terminal. You'll be asked for a username and password when running `script/stage`. Use your GHE.io username and, since we enforce 2FA, use a [personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) as your password.
+
+_Having trouble deploying to a staging server? Delete the entire `_site` directory and try again. Sometimes the temporary Git repository we make in the script can go awry._
+
+When you're done with staging and your pull request has been approved, you can merge your branch. Your changes will be automatically deployed to the production site in a few minutes.
+
+----
+
+#### Triage Issues [![Open Source Helpers](https://www.codetriage.com/github/government.github.com/badges/users.svg)](https://www.codetriage.com/github/government.github.com)
+
+In addition to contributing changes, you can help to triage issues. This can include asking for vital information or requesting formatting changes. If you would like to start triaging issues, one easy way to get started is to [subscribe to government.github.com on CodeTriage](https://www.codetriage.com/github/government.github.com).
+
+----
+
+Don't see what you're looking for? Create an [issue](https://github.com/github/government.github.com/issues/new), we'll do our best to help you out.
